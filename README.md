@@ -1,5 +1,3 @@
-# PlayBusinessCode
-Code Challenge Front End Sr
 React Native App with NPM Start and Expo
 This is a basic guide to set up and run a React Native app using npm start and Expo.
 
@@ -24,6 +22,3 @@ Try deleting the node_modules folder and re-installing dependencies with npm ins
 Make sure you have a stable internet connection, as some dependencies may fail to install without one
 Contributing
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
-
-License
-This project is licensed under the MIT License. See the LICENSE file for details.

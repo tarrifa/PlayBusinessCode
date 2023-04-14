@@ -16,8 +16,8 @@ export default function Payment(props) {
     // Calculate bank fee
 
     let bankFee = 0;
-    if(props.payment !== "(SPEI)"){
-        bankFee = (commission-props.points+props.investment) * 0.024;
+    if (props.payment !== "(SPEI)") {
+      bankFee = (commission - props.points + props.investment) * 0.024;
     }
     setBank(bankFee);
 
@@ -33,70 +33,64 @@ export default function Payment(props) {
     setTotal(totalAmount);
   }, [props.investment, props.points, props.payment]);
   return (
-    
-      
-      <Card containerStyle={styles.card}>
-        <View style={styles.cardContainer}>
-
-        <View style={{backgroundColor:'#fff', flex:1}}>
-
-        <View style={styles.table}>
-          <Text style={styles.subtitle}>Inversión</Text>
-          <Text style={styles.text}>
-            ${Intl.NumberFormat("en-US").format(props.investment)}
-          </Text>
+    <Card containerStyle={styles.card}>
+      <View style={styles.cardContainer}>
+        <View style={{ backgroundColor: "#fff", flex: 1 }}>
+          <View style={styles.table}>
+            <Text style={styles.subtitle}>Inversión</Text>
+            <Text style={styles.text}>
+              ${Intl.NumberFormat("en-US").format(props.investment)}
+            </Text>
+          </View>
+          <View style={styles.table}>
+            <Text style={styles.subtitle}>Descuentos Puntos Play</Text>
+            <Text style={styles.text}>
+              ${Intl.NumberFormat("en-US").format(props.points)}
+            </Text>
+          </View>
+          <View style={styles.table}>
+            <Text style={styles.subtitle}>Comisión Play Business</Text>
+            <Text style={styles.text}>
+              ${Intl.NumberFormat("en-US").format(props.investment * 0.05)}
+            </Text>
+          </View>
+          <View style={styles.table}>
+            <Text style={styles.subtitle}>Comisión bancaria</Text>
+            <Text style={styles.text}>
+              ${Intl.NumberFormat("en-US").format(bank)}
+            </Text>
+          </View>
+          <View style={styles.table}>
+            <Text style={styles.subtitle}>I.V.A.</Text>
+            <Text style={styles.text}>
+              ${Intl.NumberFormat("en-US").format(taxes)}
+            </Text>
+          </View>
         </View>
-        <View style={styles.table}>
-          <Text style={styles.subtitle}>Descuentos Puntos Play</Text>
-          <Text style={styles.text}>
-            ${Intl.NumberFormat("en-US").format(props.points)}
-          </Text>
-        </View>
-        <View style={styles.table}>
-          <Text style={styles.subtitle}>Comisión Play Business</Text>
-          <Text style={styles.text}>
-            ${Intl.NumberFormat("en-US").format(props.investment * 0.05)}
-          </Text>
-        </View>
-        <View style={styles.table}>
-          <Text style={styles.subtitle}>Comisión bancaria</Text>
-          <Text style={styles.text}>
-            ${Intl.NumberFormat("en-US").format(bank)}
-          </Text>
-        </View>
-        <View style={styles.table}>
-          <Text style={styles.subtitle}>I.V.A.</Text>
-          <Text style={styles.text}>
-            ${Intl.NumberFormat("en-US").format(taxes)}
-          </Text>
-        </View>
-
-            </View>
         <View style={styles.last}>
           <Text
             style={{
-                fontWeight: 500,
-                fontSize: 14,
-                lineHeight: 17,
-                color: "#ffffff",
+              fontWeight: 500,
+              fontSize: 14,
+              lineHeight: 17,
+              color: "#ffffff",
             }}
-            >
+          >
             Total a pagar
           </Text>
           <Text
             style={{
-                fontWeight: 600,
-                fontSize: 16,
-                lineHeight: 19,
-                color: "#ffffff",
+              fontWeight: 600,
+              fontSize: 16,
+              lineHeight: 19,
+              color: "#ffffff",
             }}
-            >
+          >
             ${Intl.NumberFormat("en-US").format(total)}
           </Text>
         </View>
-              </View>
-      </Card>
-    
+      </View>
+    </Card>
   );
 }
 
@@ -145,16 +139,16 @@ const styles = StyleSheet.create({
     shadowRadius: 20,
     elevation: 2,
   },
-  
+
   last: {
     backgroundColor: "#243D42",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
     marginTop: 14,
-    flex:1, 
-    height:45,
-    padding:11
+    flex: 1,
+    height: 45,
+    padding: 11,
   },
   cardContainer: {
     borderRadius: 10,

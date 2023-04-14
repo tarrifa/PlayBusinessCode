@@ -71,7 +71,7 @@ export default function NewInvestment() {
           <Slider
             value={points}
             onValueChange={setPoints}
-            maximumValue={investment*.5}
+            maximumValue={investment * 0.5}
             minimumValue={0}
             step={1000}
             allowTouchTrack
@@ -131,7 +131,7 @@ export default function NewInvestment() {
         </Card>
       </View>
       <Text style={styles.title}>Pago</Text>
-      <Payment investment= {investment} points={points} payment={payment}/>
+      <Payment investment={investment} points={points} payment={payment} />
     </ScrollView>
   );
 }
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
       width: 2,
       height: 2,
     },
-    borderColor:"transparent",
+    borderColor: "transparent",
     shadowOpacity: 0.1,
     shadowRadius: 20,
     elevation: 2,

@@ -3,9 +3,9 @@ import { View, StyleSheet, Text, Image } from "react-native";
 import { Header, Avatar, Icon } from "@rneui/themed";
 
 const Navbar = () => {
-    const logo = require("../../assets/logoPB.png");
+  const logo = require("../../assets/logoPB.png");
 
-    return (
+  return (
     <Header
       containerStyle={styles.headerContainer}
       placement="center"
@@ -28,7 +28,6 @@ const Navbar = () => {
     />
   );
 };
-
 
 const styles = StyleSheet.create({
   headerContainer: {
@@ -55,11 +54,11 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginLeft: 10,
   },
-  image:{
-    width:119,
-    height:32,
-    marginLeft:5 
-  }
+  image: {
+    width: 119,
+    height: 32,
+    marginLeft: 5,
+  },
 });
 
 export default Navbar;

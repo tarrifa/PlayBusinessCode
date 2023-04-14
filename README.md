@@ -1,24 +1,19 @@
-React Native App with NPM Start and Expo
-This is a basic guide to set up and run a React Native app using npm start and Expo.
+This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
-Requirements
-Node.js installed on your machine
-NPM package manager installed on your machine
-Expo-CLI installed on your machine
-Installation
-Clone or download the project from the repository
-Navigate to the project directory in your terminal or command prompt
-Run npm install to install all dependencies
-Run expo start to start the development server and launch the app
-Usage
-To run the app, make sure you have the Expo client app installed on your mobile device
-Scan the QR code that appears in your terminal or browser using the Expo client app
-The app will then launch on your device
-Troubleshooting
-If you encounter any issues with the app, try the following:
-Make sure you have the latest version of Node.js and NPM installed
-Run npm audit to check for any vulnerabilities or issues with dependencies
-Try deleting the node_modules folder and re-installing dependencies with npm install
-Make sure you have a stable internet connection, as some dependencies may fail to install without one
-Contributing
-Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+## Available Scripts
+
+If Yarn was installed when the project was initialized, then dependencies will have been installed via Yarn, and you should probably use it to run these commands as well. Unlike dependency installation, command running syntax is identical for Yarn and NPM at the time of this writing.
+
+### `npm start`
+
+Runs your app in development mode.
+
+Open it in the [Expo app](https://expo.io) on your phone to view it. It will reload if you save edits to your files, and you will see build errors and logs in the terminal.
+
+Sometimes you may need to reset or clear the React Native packager's cache. To do so, you can pass the `--reset-cache` flag to the start script:
+
+```
+npm start --reset-cache
+# or
+yarn start --reset-cache
+```
